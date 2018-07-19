@@ -1,6 +1,9 @@
 {
-  "name": "example-create-react-app-express",
+  "name": "bartoblog-server",
   "version": "1.0.0",
+  "engines": {
+    "node": "8.9.3"
+  },
   "scripts": {
     "client": "cd client && npm start",
     "server": "nodemon server.js",
