@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
-
 body {
-  font-family: 'Lato', sans-serif;
+  padding-top: 1rem;
+  background-color: #e7e7e7;
+  /* background: url('./images/background.jpg') repeat; */
+  padding-bottom: 3rem;
+}
+hr {
+  margin-top: 0.2rem !important;
+  margin-bottom: 0.2rem !important;
 }
