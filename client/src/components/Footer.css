@@ -1,0 +1,10 @@
+.Footer {
+  position: absolute;
+  display: block;
+  margin: 0 auto;
+  bottom: 0;
+  width: 100vw;
+}
+.Footer > p {
+  text-shadow: 0.05rem 0.05rem #00000024;
+}

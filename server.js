@@ -4,7 +4,9 @@ const path = require('path');
 const MongoClient = require('mongodb').MongoClient;
 const app = express();
 const port = process.env.port || 5000;
-const dbURL = 'mongodb://gradepuxi22:!lizd412@ds243041.mlab.com:43041/bartoblog';
+const username = '';
+const password = '';
+const dbURL = `mongodb://${username}:${password}@ds243041.mlab.com:43041/bartoblog`;
 
 MongoClient.connect(dbURL, { useNewUrlParser: true }, (err, database) => {
   if (err)
@@ -16,8 +18,9 @@ MongoClient.connect(dbURL, { useNewUrlParser: true }, (err, database) => {
   postCollection.find({}).sort({createdAt: -1, title: 1}).toArray((err, result) => {
     if (err)
       return console.dir(err);
-    app.get('/api/posts', (req, res) => {
+    app.get('/api/posts', (req, res, next) => {
       res.send({ posts: result });
+      next();
     });
   });
 });
